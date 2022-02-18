@@ -21,7 +21,7 @@ try
         {
             var pipline = channel.Pipeline;
             pipline.AddLast(new LengthFieldPrepender(4));
-            pipline.AddLast(new LengthFieldBasedFrameDecoder(ByteOrder.LittleEndian, int.MaxValue, 0, 4, 0, 4, false));
+            pipline.AddLast(new LengthFieldBasedFrameDecoder(int.MaxValue, 0, 4, 0, 4));
             pipline.AddLast(new ProtobufDecoder(TestMessage.Parser));
             pipline.AddLast(new EntryHandler());
         }));
