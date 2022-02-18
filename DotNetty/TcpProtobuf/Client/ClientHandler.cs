@@ -3,8 +3,19 @@ using TcpProtobuf.Messages;
 
 namespace TcpProtobuf.Handlers;
 
-internal class EntryHandler : ChannelHandlerAdapter
+internal class ClientHandler : ChannelHandlerAdapter
 {
+    public override void ChannelActive(IChannelHandlerContext context)
+    {
+        var message = new TestMessage()
+        {
+            Foo = 100,
+            Bar = "hello from ClientHandler!"
+        };
+        Console.WriteLine($"发送: {message}");
+        context.WriteAndFlushAsync(message);
+    }
+
     public override void ChannelRead(IChannelHandlerContext context, object message)
     {
         if (message is TestMessage tm)
