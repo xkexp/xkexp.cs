@@ -23,10 +23,12 @@ try
             IChannelPipeline pipeline = channel.Pipeline;
             pipeline.AddLast(new LengthFieldBasedFrameDecoder(ushort.MaxValue, 0, 4, 0, 4));
             pipeline.AddLast(new ProtobufDecoder(TestMessage.Parser));
-            pipeline.AddLast(new LengthFieldPrepender(4));
-            pipeline.AddLast(new ProtobufEncoder());
 
             pipeline.AddLast(new ClientHandler());
+
+            pipeline.AddFirst(new ProtobufEncoder());
+            pipeline.AddFirst(new LengthFieldPrepender(4));
+
         }));
 
     var clientChannel = await bootstrap.ConnectAsync(new IPEndPoint(IPAddress.Parse("127.0.0.1"), 8087));

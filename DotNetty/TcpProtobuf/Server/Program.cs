@@ -22,9 +22,11 @@ try
             var pipeline = channel.Pipeline;
             pipeline.AddLast(new LengthFieldBasedFrameDecoder(ushort.MaxValue, 0, 4, 0, 4));
             pipeline.AddLast(new ProtobufDecoder(TestMessage.Parser));
+
             pipeline.AddLast(new ServerHandler());
-            pipeline.AddLast(new LengthFieldPrepender(4));
-            pipeline.AddLast(new ProtobufEncoder());
+
+            pipeline.AddFirst(new ProtobufEncoder());
+            pipeline.AddFirst(new LengthFieldPrepender(4));
         }));
 
     var bootChannel = await bootstrap.BindAsync(8087);
