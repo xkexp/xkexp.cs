@@ -1,6 +1,6 @@
 <Project>
  <PropertyGroup>
-    <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)\..\build\Intermediate\$(MSBuildProjectName)\$(Configuration)\$(Platform)\obj</BaseIntermediateOutputPath>
+    <BaseIntermediateOutputPath>$(MSBuildProjectDirectory)\..\build\_Intermediate\</BaseIntermediateOutputPath>
     <BaseOutputPath>$(MSBuildProjectDirectory)\..\build\$(MSBuildProjectName)</BaseOutputPath>
     <TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>
  </PropertyGroup>
