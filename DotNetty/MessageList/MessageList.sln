@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32112.339
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageListCodec", "MessageListCodec\MessageListCodec.csproj", "{D181166E-80A9-4DD6-952C-E754774FFFD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MessageListCodec.Test", "MessageListCodec.Test\MessageListCodec.Test.csproj", "{EE54BBF4-41AA-41DA-A300-7D1E1C48ED54}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D181166E-80A9-4DD6-952C-E754774FFFD9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D181166E-80A9-4DD6-952C-E754774FFFD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D181166E-80A9-4DD6-952C-E754774FFFD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D181166E-80A9-4DD6-952C-E754774FFFD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE54BBF4-41AA-41DA-A300-7D1E1C48ED54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE54BBF4-41AA-41DA-A300-7D1E1C48ED54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE54BBF4-41AA-41DA-A300-7D1E1C48ED54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE54BBF4-41AA-41DA-A300-7D1E1C48ED54}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {42BC1E37-A3A9-49A2-A753-E15BB70188D0}
+	EndGlobalSection
+EndGlobal

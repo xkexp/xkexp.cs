@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+option csharp_namespace = "xkexp.DotNetty.MessageListCodec";
+
+// 单个消息
+message VariantMessage {
+  int32 message_id = 1;
+
+  int32 body_length = 2;
+
+  bytes body_content = 3;
+}
+
+// 消息列表
+message MessageList {
+  repeated VariantMessage messages = 1;
+}
+
+message Test1Message {
+  int32 t1 = 1;
+}
+
+message Test2Message {
+  string t2 = 1;
+}
