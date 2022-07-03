@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "cmdl-no-args": {
+      "commandName": "Project"
+    },
+    "cmdl-test": {
+      "commandName": "Project",
+      "commandLineArgs": "--file abc.txt"
+    }
+  }
+}
